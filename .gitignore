@@ -1,29 +1,46 @@
+# Rust build artifacts
 /target/
 /**/target/
 Cargo.lock
-.vscode/
-*.code-workspace
 *.exe
 *.dll
 *.so
 *.dylib
 *.rlib
+.rustc_info.json
+CACHEDIR.TAG
+main
+
+# Solana/Anchor specific
+**/target/deploy/
+**/target/idl/
+**/target/types/
+**/target/sbpf-solana-solana/
+**/*-keypair.json
+
+# Node.js
+node_modules/
+yarn.lock
+
+# IDE/Editors
+.vscode/
+.idea/
+*.code-workspace
+*.iml
+*.sublime-*
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Temporary files
 *.tmp
 *.swp
 *.swo
 *~
-*.DS_Store
-**/.DS_Store
-*.log
-CACHEDIR.TAG
-.rustc_info.json
-main
 *.bak
-node_modules/
-venv/
-env/
-.idea/
-*.iml
-*.sublime-*
+*.log
+
+# Keep important files
 !.gitignore
 !ReadMe.md
